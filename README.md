@@ -1,2 +1,2 @@
-# An JPEG decoder written purely in python3.
+# An JPEG decoder written purely in Python3.
 

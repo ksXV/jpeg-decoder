@@ -1,4 +1,8 @@
 class HuffmanTable:
+    """
+    A Huffman Table class
+    """
+
     def __init__(self):
         self.root = []
         self.elements = []
@@ -13,11 +17,11 @@ class HuffmanTable:
             for i in [0, 1]:
                 if len(root) == i:
                     root.append([])
-                if self.BitsFromLengths(root[i], element, pos-1):
+                if self.BitsFromLengths(root[i], element, pos - 1) is True:
                     return True
         return False
 
-    def GetHuffmanBits(self,  lengths, elements):
+    def GetHuffmanBits(self, lengths, elements):
         self.elements = elements
         ii = 0
         for i in range(len(lengths)):
@@ -32,9 +36,9 @@ class HuffmanTable:
         return r
 
     def GetCode(self, st):
-        while (True):
+        while True:
             res = self.Find(st)
             if res == 0:
                 return 0
-            elif (res != -1):
+            elif res != -1:
                 return res
